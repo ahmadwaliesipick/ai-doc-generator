@@ -17,7 +17,7 @@ def finetune_codet5(train_csv, val_csv, model_name="Salesforce/codet5-small", ou
     val_dataset = Dataset.from_pandas(val_df)
     
     def preprocess_function(examples):
-        inputs = ["summarize: " + code for code in examples["code"]]
+        inputs = ["summarize: " + str(code) for code in examples["code"]]
         model_inputs = tokenizer(inputs, max_length=512, truncation=True, padding="max_length")
         
         # Tokenize targets
