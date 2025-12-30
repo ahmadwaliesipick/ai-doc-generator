@@ -1,0 +1,22 @@
+# Python
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Data (Raw repos are too large)
+data/raw/repos/
+data/raw/extracted_js.csv
+data/raw/extracted_php.csv
+data/raw/extracted_combined.csv
+models/
+*.bin
+*.pt
+*.safetensors
+
+# Metrics/Output
+metrics/baseline_results.csv
+metrics/baseline_summary.txt
+
+# OS
+.DS_Store
